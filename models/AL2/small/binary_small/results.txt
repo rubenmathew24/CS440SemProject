@@ -1,0 +1,64 @@
+
+=============================== 
+MODEL DETAILS 
+Learning type: AL2 
+Size type: small 
+Model type: binary 
+Epochs: 10 
+Batch Size: 16 
+=============================== 
+
+=== Round 1 / 5 === 
+Training... 
+	Labeled samples: 159 
+	Unlabeled pool: 637 
+Evaluating... 
+	Accuracy: 0.9000 
+	F1 score: 0.9329 
+	Training Time: 30.32 seconds 
+Sampling... 
+
+=== Round 2 / 5 === 
+Training... 
+	Labeled samples: 318 
+	Unlabeled pool: 478 
+Evaluating... 
+	Accuracy: 0.8950 
+	F1 score: 0.9307 
+	Training Time: 93.83 seconds 
+Sampling... 
+
+=== Round 3 / 5 === 
+Training... 
+	Labeled samples: 477 
+	Unlabeled pool: 319 
+Evaluating... 
+	Accuracy: 0.8950 
+	F1 score: 0.9311 
+	Training Time: 186.38 seconds 
+Sampling... 
+
+=== Round 4 / 5 === 
+Training... 
+	Labeled samples: 636 
+	Unlabeled pool: 160 
+Evaluating... 
+	Accuracy: 0.8850 
+	F1 score: 0.9251 
+	Training Time: 308.18 seconds 
+Sampling... 
+
+=== Round 5 / 5 === 
+Training... 
+	Labeled samples: 795 
+	Unlabeled pool: 1 
+Evaluating... 
+	Accuracy: 0.9200 
+	F1 score: 0.9467 
+	Training Time: 457.58 seconds 
+
+===== Results ===== 
+Accuracy:       0.9200 
+Precision:      0.9281 
+F1 Score:       0.9467 
+Training Time:  457.58 seconds 
