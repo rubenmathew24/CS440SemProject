@@ -16,6 +16,7 @@ from torch.nn.functional import softmax
 import argparse
 import numpy as np
 from sklearn.cluster import KMeans
+import gc
 
 
 # HELPS CLEAR WARNINGS
@@ -235,7 +236,7 @@ def custom_query(model, unlabeled_df, tokenizer, query_batch_size):
     start_time = time.time()
 
     with torch.no_grad():
-        for batch in tqdm(loader, desc="Sampling...", leave=False, colour='cyan'):
+        for batch in tqdm(loader, desc="Sampling", leave=False, colour='yellow'):
             input_ids = batch["input_ids"].to(config.DEVICE)
             attention_mask = batch["attention_mask"].to(config.DEVICE)
 
@@ -251,22 +252,24 @@ def custom_query(model, unlabeled_df, tokenizer, query_batch_size):
     entropies = np.array(entropies)
     embeddings = torch.cat(logits_list, dim=0).numpy()
 
-    # Step 1: Take top-5 uncertain samples
-    top_n = min(5 * query_batch_size, len(unlabeled_df))
-    top_entropy_indices = np.argsort(entropies)[-top_n:]
-
+    # Step 1: Top-N uncertain samples using np.argpartition
+    top_n = min(3 * query_batch_size, len(unlabeled_df))
+    top_entropy_indices = np.argpartition(entropies, -top_n)[-top_n:]
     top_embeddings = embeddings[top_entropy_indices]
 
-    # Step 2: Cluster them
+    # Step 3: KMeans
     num_unique = len(np.unique(top_embeddings, axis=0))
     effective_k = min(query_batch_size, num_unique)
-
-    kmeans = KMeans(n_clusters=effective_k, n_init="auto", random_state=SEED)
+    kmeans = KMeans(n_clusters=effective_k, n_init="auto", random_state=42)
     kmeans.fit(top_embeddings)
     cluster_centers = kmeans.cluster_centers_
     distances = np.linalg.norm(top_embeddings[:, None, :] - cluster_centers[None, :, :], axis=2)
     closest_indices = np.argmin(distances, axis=0)
     selected_indices = top_entropy_indices[closest_indices]
+
+    # Cleanup memory
+    torch.cuda.empty_cache()
+    gc.collect()
 
     sampling_time = time.time() - start_time
     return unlabeled_df.iloc[selected_indices], sampling_time
