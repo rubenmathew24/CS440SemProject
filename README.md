@@ -1,3 +1,13 @@
+## ISSUES I HAD WITH WINDOWS
+
+Make sure to add these to the environment before running to remove lots of warnings:
+
+```
+set LOKY_MAX_CPU_COUNT=8
+set OMP_NUM_THREADS=1
+set CUBLAS_WORKSPACE_CONFIG=:4096:8
+```
+
 ## DATASET CREATION
 
 First need to create the datasets we are running with. Can't use the entire Amazon dataset because it is very large (470+ GBs of data)
