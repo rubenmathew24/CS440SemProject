@@ -1,0 +1,137 @@
+{
+    "baseline": {
+        "binary": {
+            "small": {
+                "Accuracy": 0.92,
+                "Precision": 0.9281,
+                "F1 Score": 0.9467,
+                "Training Time": 22.19
+            },
+            "medium": {
+                "Accuracy": 0.9366,
+                "Precision": 0.9633,
+                "F1 Score": 0.9587,
+                "Training Time": 167.05
+            },
+            "large": {
+                "Accuracy": 0.9463,
+                "Precision": 0.9761,
+                "F1 Score": 0.9651,
+                "Training Time": 221.74
+            }
+        },
+        "multi": {
+            "small": {
+                "Accuracy": 0.345,
+                "Top-3 Accuracy": 0.59,
+                "Weighted Precision": 0.3624,
+                "Weighted F1 Score": 0.3088,
+                "Training Time": 22.12
+            },
+            "medium": {
+                "Accuracy": 0.4807,
+                "Top-3 Accuracy": 0.7175,
+                "Weighted Precision": 0.4555,
+                "Weighted F1 Score": 0.4565,
+                "Training Time": 165.88
+            },
+            "large": {
+                "Accuracy": 0.4959,
+                "Top-3 Accuracy": 0.7384,
+                "Weighted Precision": 0.4797,
+                "Weighted F1 Score": 0.4737,
+                "Training Time": 222.03
+            }
+        }
+    },
+    "AL1": {
+        "binary": {
+            "small": {
+                "Accuracy": 0.925,
+                "Precision": 0.9342,
+                "F1 Score": 0.9498,
+                "Training Time": 67.58
+            },
+            "medium": {
+                "Accuracy": 0.9383,
+                "Precision": 0.9578,
+                "F1 Score": 0.9601,
+                "Training Time": 516.36
+            },
+            "large": {
+                "Accuracy": 0.9499,
+                "Precision": 0.965,
+                "F1 Score": 0.9679,
+                "Training Time": 735.79
+            }
+        },
+        "multi": {
+            "small": {
+                "Accuracy": 0.27,
+                "Top-3 Accuracy": 0.565,
+                "Weighted Precision": 0.2463,
+                "Weighted F1 Score": 0.2293,
+                "Training Time": 67.54
+            },
+            "medium": {
+                "Accuracy": 0.4833,
+                "Top-3 Accuracy": 0.7215,
+                "Weighted Precision": 0.4639,
+                "Weighted F1 Score": 0.4596,
+                "Training Time": 517.09
+            },
+            "large": {
+                "Accuracy": 0.498,
+                "Top-3 Accuracy": 0.7431,
+                "Weighted Precision": 0.4835,
+                "Weighted F1 Score": 0.4768,
+                "Training Time": 735.94
+            }
+        }
+    },
+    "AL2": {
+        "binary": {
+            "small": {
+                "Accuracy": 0.915,
+                "Precision": 0.9221,
+                "F1 Score": 0.9435,
+                "Training Time": 67.78
+            },
+            "medium": {
+                "Accuracy": 0.933,
+                "Precision": 0.9486,
+                "F1 Score": 0.9569,
+                "Training Time": 521.33
+            },
+            "large": {
+                "Accuracy": 0.9499,
+                "Precision": 0.9578,
+                "F1 Score": 0.9681,
+                "Training Time": 835.92
+            }
+        },
+        "multi": {
+            "small": {
+                "Accuracy": 0.31,
+                "Top-3 Accuracy": 0.565,
+                "Weighted Precision": 0.3058,
+                "Weighted F1 Score": 0.2584,
+                "Training Time": 67.62
+            },
+            "medium": {
+                "Accuracy": 0.483,
+                "Top-3 Accuracy": 0.7208,
+                "Weighted Precision": 0.4716,
+                "Weighted F1 Score": 0.4711,
+                "Training Time": 528.19
+            },
+            "large": {
+                "Accuracy": 0.4889,
+                "Top-3 Accuracy": 0.7361,
+                "Weighted Precision": 0.4915,
+                "Weighted F1 Score": 0.4667,
+                "Training Time": 1451.59
+            }
+        }
+    }
+}

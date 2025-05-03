@@ -229,14 +229,13 @@ def custom_query(model, unlabeled_df, tokenizer, query_batch_size):
     dataset = ReviewDataset(texts, dummy_labels, tokenizer, config.MAX_LENGTH)
     loader = DataLoader(dataset, batch_size=batch_size)
 
-    uncertainties = []
     entropies = []
-    embeddings = []
+    logits_list = []
 
     start_time = time.time()
 
     with torch.no_grad():
-        for batch in tqdm(loader, desc="Sampling...", leave=False, colour='yellow'):
+        for batch in tqdm(loader, desc="Sampling...", leave=False, colour='cyan'):
             input_ids = batch["input_ids"].to(config.DEVICE)
             attention_mask = batch["attention_mask"].to(config.DEVICE)
 
@@ -244,50 +243,33 @@ def custom_query(model, unlabeled_df, tokenizer, query_batch_size):
             logits = outputs.logits
             probs = softmax(logits, dim=1)
 
-            # Least Confidence
-            max_probs, _ = probs.max(dim=1)
-            lc = 1 - max_probs
-            uncertainties.extend(lc.cpu().tolist())
-
-            # Entropy
             entropy = -torch.sum(probs * torch.log(probs + 1e-12), dim=1)
+
             entropies.extend(entropy.cpu().tolist())
-            
-            # Embeddings
-            embeddings.append(logits.cpu())
+            logits_list.append(logits.cpu())
 
-    embeddings = torch.cat(embeddings, dim=0).numpy()
+    entropies = np.array(entropies)
+    embeddings = torch.cat(logits_list, dim=0).numpy()
 
-    # Blend least confidence and entropy (For Uncertaintiy)
-    categories = utils.get_all_categories()
-    num_classes = 2 if IS_BINARY else len(categories)
+    # Step 1: Take top-5 uncertain samples
+    top_n = min(5 * query_batch_size, len(unlabeled_df))
+    top_entropy_indices = np.argsort(entropies)[-top_n:]
 
-    alpha = np.log(num_classes) / np.log(2 + num_classes)
-    uncertainty_scores = (1 - alpha) * np.array(uncertainties) + alpha * np.array(entropies)
+    top_embeddings = embeddings[top_entropy_indices]
 
-    # Clamp number of clusters to distinct points in the embedding space
-    num_unique = len(np.unique(embeddings, axis=0))
+    # Step 2: Cluster them
+    num_unique = len(np.unique(top_embeddings, axis=0))
     effective_k = min(query_batch_size, num_unique)
 
-    # Use KMeans (For Diversity)
-    kmeans = KMeans(n_clusters=effective_k, n_init="auto", random_state=42)
-    kmeans.fit(embeddings)
+    kmeans = KMeans(n_clusters=effective_k, n_init="auto", random_state=SEED)
+    kmeans.fit(top_embeddings)
     cluster_centers = kmeans.cluster_centers_
-    distances = np.linalg.norm(embeddings[:, None, :] - cluster_centers[None, :, :], axis=2)
-    diversity_scores = np.min(distances, axis=1)
+    distances = np.linalg.norm(top_embeddings[:, None, :] - cluster_centers[None, :, :], axis=2)
+    closest_indices = np.argmin(distances, axis=0)
+    selected_indices = top_entropy_indices[closest_indices]
 
-    # Normalize scores
-    u_norm = (uncertainty_scores - np.min(uncertainty_scores)) / (np.max(uncertainty_scores) - np.min(uncertainty_scores) + 1e-6)
-    d_norm = (diversity_scores - np.min(diversity_scores)) / (np.max(diversity_scores) - np.min(diversity_scores) + 1e-6)
-
-    # Blend Uncertainty and Diversity based on params
-    beta = np.log(len(unlabeled_df)) / np.log(config.DATASET_SIZES[SIZE])
-    final_scores = (1 - beta) * u_norm + beta * d_norm
-
-    topk_indices = np.argsort(final_scores)[-query_batch_size:][::-1]
     sampling_time = time.time() - start_time
-
-    return unlabeled_df.iloc[topk_indices], sampling_time
+    return unlabeled_df.iloc[selected_indices], sampling_time
 
 def final_evaluation(model, tokenizer, training_time):
     log_location = utils.get_log_location(LEARNING_TYPE, SIZE, IS_BINARY)
