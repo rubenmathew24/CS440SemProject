@@ -1,9 +1,9 @@
 
 =============================== 
 MODEL DETAILS 
-Learning type: AL1 
+Learning type: AL2 
 Size type: medium 
-Model type: binary 
+Model type: multi 
 Epochs: 5 
 Batch Size: 16 
 =============================== 
@@ -13,8 +13,8 @@ Training...
 	Labeled samples: 2397 
 	Unlabeled pool: 9591 
 Evaluating... 
-	Accuracy: 0.9350 
-	F1 score: 0.9579 
+	Accuracy: 0.3933 
+	F1 score: 0.3449 
 	Training Time: 33.26 seconds 
 Sampling... 
 
@@ -23,9 +23,9 @@ Training...
 	Labeled samples: 4794 
 	Unlabeled pool: 7194 
 Evaluating... 
-	Accuracy: 0.9386 
-	F1 score: 0.9602 
-	Training Time: 106.93 seconds 
+	Accuracy: 0.4510 
+	F1 score: 0.4291 
+	Training Time: 111.68 seconds 
 Sampling... 
 
 === Round 3 / 5 === 
@@ -33,9 +33,9 @@ Training...
 	Labeled samples: 7191 
 	Unlabeled pool: 4797 
 Evaluating... 
-	Accuracy: 0.9373 
-	F1 score: 0.9588 
-	Training Time: 211.96 seconds 
+	Accuracy: 0.4573 
+	F1 score: 0.4402 
+	Training Time: 220.43 seconds 
 Sampling... 
 
 === Round 4 / 5 === 
@@ -43,9 +43,9 @@ Training...
 	Labeled samples: 9588 
 	Unlabeled pool: 2400 
 Evaluating... 
-	Accuracy: 0.9366 
-	F1 score: 0.9584 
-	Training Time: 348.36 seconds 
+	Accuracy: 0.4640 
+	F1 score: 0.4409 
+	Training Time: 359.22 seconds 
 Sampling... 
 
 === Round 5 / 5 === 
@@ -53,12 +53,13 @@ Training...
 	Labeled samples: 11985 
 	Unlabeled pool: 3 
 Evaluating... 
-	Accuracy: 0.9383 
-	F1 score: 0.9601 
-	Training Time: 516.36 seconds 
+	Accuracy: 0.4830 
+	F1 score: 0.4711 
+	Training Time: 528.19 seconds 
 
 ===== Results ===== 
-Accuracy:       0.9383 
-Precision:      0.9578 
-F1 Score:       0.9601 
-Training Time:  516.36 seconds 
+Accuracy:                       0.4830 
+Top-3 Accuracy:                 0.7208 
+Weighted Precision:             0.4716 
+Weighted F1 Score:              0.4711 
+Training Time:                  528.19 seconds 

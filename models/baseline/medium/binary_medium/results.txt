@@ -1,0 +1,20 @@
+
+=============================== 
+MODEL DETAILS 
+Learning type: baseline 
+Size type: medium 
+Model type: binary 
+Epochs: 5 
+Batch Size: 16 
+=============================== 
+Starting training...
+ 
+
+Training completed in 167.05 seconds 
+Evaluating... 
+
+===== Results ===== 
+Accuracy:       0.9366 
+Precision:      0.9633 
+F1 Score:       0.9587 
+Training Time:  167.05 seconds 
