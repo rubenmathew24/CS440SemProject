@@ -13,9 +13,9 @@ Training...
 	Labeled samples: 159 
 	Unlabeled pool: 637 
 Evaluating... 
-	Accuracy: 0.9000 
-	F1 score: 0.9329 
-	Training Time: 30.28 seconds 
+	Accuracy: 0.9050 
+	F1 score: 0.9369 
+	Training Time: 4.57 seconds 
 Sampling... 
 
 === Round 2 / 5 === 
@@ -23,9 +23,9 @@ Training...
 	Labeled samples: 318 
 	Unlabeled pool: 478 
 Evaluating... 
-	Accuracy: 0.9050 
-	F1 score: 0.9365 
-	Training Time: 93.69 seconds 
+	Accuracy: 0.9000 
+	F1 score: 0.9333 
+	Training Time: 13.84 seconds 
 Sampling... 
 
 === Round 3 / 5 === 
@@ -33,9 +33,9 @@ Training...
 	Labeled samples: 477 
 	Unlabeled pool: 319 
 Evaluating... 
-	Accuracy: 0.9050 
-	F1 score: 0.9381 
-	Training Time: 186.18 seconds 
+	Accuracy: 0.9100 
+	F1 score: 0.9400 
+	Training Time: 27.44 seconds 
 Sampling... 
 
 === Round 4 / 5 === 
@@ -44,8 +44,8 @@ Training...
 	Unlabeled pool: 160 
 Evaluating... 
 	Accuracy: 0.9000 
-	F1 score: 0.9342 
-	Training Time: 307.19 seconds 
+	F1 score: 0.9333 
+	Training Time: 45.39 seconds 
 Sampling... 
 
 === Round 5 / 5 === 
@@ -53,12 +53,12 @@ Training...
 	Labeled samples: 795 
 	Unlabeled pool: 1 
 Evaluating... 
-	Accuracy: 0.9100 
-	F1 score: 0.9404 
-	Training Time: 456.48 seconds 
+	Accuracy: 0.9250 
+	F1 score: 0.9498 
+	Training Time: 67.58 seconds 
 
 ===== Results ===== 
-Accuracy:       0.9100 
-Precision:      0.9161 
-F1 Score:       0.9404 
-Training Time:  456.48 seconds 
+Accuracy:       0.9250 
+Precision:      0.9342 
+F1 Score:       0.9498 
+Training Time:  67.58 seconds 

@@ -1,7 +1,7 @@
 
 =============================== 
 MODEL DETAILS 
-Learning type: AL1 
+Learning type: AL2 
 Size type: medium 
 Model type: binary 
 Epochs: 5 
@@ -15,7 +15,7 @@ Training...
 Evaluating... 
 	Accuracy: 0.9350 
 	F1 score: 0.9579 
-	Training Time: 33.26 seconds 
+	Training Time: 33.19 seconds 
 Sampling... 
 
 === Round 2 / 5 === 
@@ -23,9 +23,9 @@ Training...
 	Labeled samples: 4794 
 	Unlabeled pool: 7194 
 Evaluating... 
-	Accuracy: 0.9386 
-	F1 score: 0.9602 
-	Training Time: 106.93 seconds 
+	Accuracy: 0.9353 
+	F1 score: 0.9577 
+	Training Time: 108.46 seconds 
 Sampling... 
 
 === Round 3 / 5 === 
@@ -33,9 +33,9 @@ Training...
 	Labeled samples: 7191 
 	Unlabeled pool: 4797 
 Evaluating... 
-	Accuracy: 0.9373 
-	F1 score: 0.9588 
-	Training Time: 211.96 seconds 
+	Accuracy: 0.9363 
+	F1 score: 0.9587 
+	Training Time: 214.95 seconds 
 Sampling... 
 
 === Round 4 / 5 === 
@@ -43,9 +43,9 @@ Training...
 	Labeled samples: 9588 
 	Unlabeled pool: 2400 
 Evaluating... 
-	Accuracy: 0.9366 
-	F1 score: 0.9584 
-	Training Time: 348.36 seconds 
+	Accuracy: 0.9373 
+	F1 score: 0.9598 
+	Training Time: 352.77 seconds 
 Sampling... 
 
 === Round 5 / 5 === 
@@ -53,12 +53,12 @@ Training...
 	Labeled samples: 11985 
 	Unlabeled pool: 3 
 Evaluating... 
-	Accuracy: 0.9383 
-	F1 score: 0.9601 
-	Training Time: 516.36 seconds 
+	Accuracy: 0.9330 
+	F1 score: 0.9569 
+	Training Time: 521.33 seconds 
 
 ===== Results ===== 
-Accuracy:       0.9383 
-Precision:      0.9578 
-F1 Score:       0.9601 
-Training Time:  516.36 seconds 
+Accuracy:       0.9330 
+Precision:      0.9486 
+F1 Score:       0.9569 
+Training Time:  521.33 seconds 
