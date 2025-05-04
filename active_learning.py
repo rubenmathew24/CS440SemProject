@@ -253,14 +253,14 @@ def custom_query(model, unlabeled_df, tokenizer, query_batch_size):
     embeddings = torch.cat(logits_list, dim=0).numpy()
 
     # Step 1: Top-N uncertain samples using np.argpartition
-    top_n = min(3 * query_batch_size, len(unlabeled_df))
+    top_n = min(5 * query_batch_size, len(unlabeled_df))
     top_entropy_indices = np.argpartition(entropies, -top_n)[-top_n:]
     top_embeddings = embeddings[top_entropy_indices]
 
     # Step 3: KMeans
     num_unique = len(np.unique(top_embeddings, axis=0))
     effective_k = min(query_batch_size, num_unique)
-    kmeans = KMeans(n_clusters=effective_k, n_init="auto", random_state=42)
+    kmeans = KMeans(n_clusters=effective_k, n_init="auto", random_state=SEED)
     kmeans.fit(top_embeddings)
     cluster_centers = kmeans.cluster_centers_
     distances = np.linalg.norm(top_embeddings[:, None, :] - cluster_centers[None, :, :], axis=2)
