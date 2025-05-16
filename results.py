@@ -202,9 +202,7 @@ def all_round_graphs():
 
 
 def main():
-	# temp = grab_round_data()
-	# print_json(temp)
-	# basic_stats_graphs()
+	basic_stats_graphs()
 	all_round_graphs()
 
 if __name__ == "__main__":
