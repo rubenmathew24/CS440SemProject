@@ -10,7 +10,7 @@ Batch Size: 16
 Starting training...
  
 
-Training completed in 165.88 seconds 
+Training completed in 165.65 seconds 
 Evaluating... 
 
 ===== Results ===== 
@@ -18,4 +18,4 @@ Accuracy:                       0.4807
 Top-3 Accuracy:                 0.7175 
 Weighted Precision:             0.4555 
 Weighted F1 Score:              0.4565 
-Training Time:                  165.88 seconds 
+Training Time:                  165.65 seconds 

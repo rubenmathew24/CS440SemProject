@@ -15,7 +15,7 @@ Training...
 Evaluating... 
 	Accuracy: 0.1900 
 	F1 score: 0.1162 
-	Training Time: 4.42 seconds 
+	Training Time: 4.43 seconds 
 Sampling... 
 
 === Round 2 / 5 === 
@@ -25,7 +25,7 @@ Training...
 Evaluating... 
 	Accuracy: 0.2550 
 	F1 score: 0.2001 
-	Training Time: 13.76 seconds 
+	Training Time: 13.75 seconds 
 Sampling... 
 
 === Round 3 / 5 === 
@@ -35,7 +35,7 @@ Training...
 Evaluating... 
 	Accuracy: 0.2400 
 	F1 score: 0.2003 
-	Training Time: 27.37 seconds 
+	Training Time: 27.39 seconds 
 Sampling... 
 
 === Round 4 / 5 === 
@@ -45,7 +45,7 @@ Training...
 Evaluating... 
 	Accuracy: 0.2750 
 	F1 score: 0.2440 
-	Training Time: 45.31 seconds 
+	Training Time: 45.30 seconds 
 Sampling... 
 
 === Round 5 / 5 === 
@@ -55,11 +55,11 @@ Training...
 Evaluating... 
 	Accuracy: 0.2700 
 	F1 score: 0.2293 
-	Training Time: 67.54 seconds 
+	Training Time: 67.46 seconds 
 
 ===== Results ===== 
 Accuracy:                       0.2700 
 Top-3 Accuracy:                 0.5650 
 Weighted Precision:             0.2463 
 Weighted F1 Score:              0.2293 
-Training Time:                  67.54 seconds 
+Training Time:                  67.46 seconds 
