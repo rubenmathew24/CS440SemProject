@@ -1,136 +1,337 @@
 {
-    "baseline": {
-        "binary": {
-            "small": {
-                "Accuracy": 0.92,
-                "Precision": 0.9281,
-                "F1 Score": 0.9467,
-                "Training Time": 22.19
-            },
-            "medium": {
-                "Accuracy": 0.9366,
-                "Precision": 0.9633,
-                "F1 Score": 0.9587,
-                "Training Time": 167.05
-            },
-            "large": {
-                "Accuracy": 0.9463,
-                "Precision": 0.9761,
-                "F1 Score": 0.9651,
-                "Training Time": 221.74
-            }
-        },
-        "multi": {
-            "small": {
-                "Accuracy": 0.345,
-                "Top-3 Accuracy": 0.59,
-                "Weighted Precision": 0.3624,
-                "Weighted F1 Score": 0.3088,
-                "Training Time": 22.12
-            },
-            "medium": {
-                "Accuracy": 0.4807,
-                "Top-3 Accuracy": 0.7175,
-                "Weighted Precision": 0.4555,
-                "Weighted F1 Score": 0.4565,
-                "Training Time": 165.88
-            },
-            "large": {
-                "Accuracy": 0.4959,
-                "Top-3 Accuracy": 0.7384,
-                "Weighted Precision": 0.4797,
-                "Weighted F1 Score": 0.4737,
-                "Training Time": 222.03
-            }
-        }
-    },
     "AL1": {
         "binary": {
             "small": {
-                "Accuracy": 0.925,
-                "Precision": 0.9342,
-                "F1 Score": 0.9498,
-                "Training Time": 67.58
+                "1": {
+                    "Accuracy": 0.905,
+                    "F1 score": 0.9369,
+                    "Training Time": 4.57
+                },
+                "2": {
+                    "Accuracy": 0.9,
+                    "F1 score": 0.9333,
+                    "Training Time": 13.8
+                },
+                "3": {
+                    "Accuracy": 0.91,
+                    "F1 score": 0.94,
+                    "Training Time": 27.31
+                },
+                "4": {
+                    "Accuracy": 0.9,
+                    "F1 score": 0.9333,
+                    "Training Time": 45.29
+                },
+                "5": {
+                    "Accuracy": 0.925,
+                    "F1 score": 0.9498,
+                    "Training Time": 67.45
+                }
             },
             "medium": {
-                "Accuracy": 0.9383,
-                "Precision": 0.9578,
-                "F1 Score": 0.9601,
-                "Training Time": 516.36
+                "1": {
+                    "Accuracy": 0.935,
+                    "F1 score": 0.9579,
+                    "Training Time": 33.14
+                },
+                "2": {
+                    "Accuracy": 0.9386,
+                    "F1 score": 0.9602,
+                    "Training Time": 106.67
+                },
+                "3": {
+                    "Accuracy": 0.9373,
+                    "F1 score": 0.9588,
+                    "Training Time": 211.79
+                },
+                "4": {
+                    "Accuracy": 0.9366,
+                    "F1 score": 0.9584,
+                    "Training Time": 348.28
+                },
+                "5": {
+                    "Accuracy": 0.9383,
+                    "F1 score": 0.9601,
+                    "Training Time": 516.13
+                }
             },
             "large": {
-                "Accuracy": 0.9499,
-                "Precision": 0.965,
-                "F1 Score": 0.9679,
-                "Training Time": 735.79
+                "1": {
+                    "Accuracy": 0.9417,
+                    "F1 score": 0.9625,
+                    "Training Time": 44.35
+                },
+                "2": {
+                    "Accuracy": 0.9493,
+                    "F1 score": 0.9675,
+                    "Training Time": 161.49
+                },
+                "3": {
+                    "Accuracy": 0.9507,
+                    "F1 score": 0.9681,
+                    "Training Time": 315.34
+                },
+                "4": {
+                    "Accuracy": 0.951,
+                    "F1 score": 0.9686,
+                    "Training Time": 506.86
+                },
+                "5": {
+                    "Accuracy": 0.9499,
+                    "F1 score": 0.9679,
+                    "Training Time": 735.48
+                }
             }
         },
         "multi": {
             "small": {
-                "Accuracy": 0.27,
-                "Top-3 Accuracy": 0.565,
-                "Weighted Precision": 0.2463,
-                "Weighted F1 Score": 0.2293,
-                "Training Time": 67.54
+                "1": {
+                    "Accuracy": 0.19,
+                    "F1 score": 0.1162,
+                    "Training Time": 4.43
+                },
+                "2": {
+                    "Accuracy": 0.255,
+                    "F1 score": 0.2001,
+                    "Training Time": 13.75
+                },
+                "3": {
+                    "Accuracy": 0.24,
+                    "F1 score": 0.2003,
+                    "Training Time": 27.39
+                },
+                "4": {
+                    "Accuracy": 0.275,
+                    "F1 score": 0.244,
+                    "Training Time": 45.3
+                },
+                "5": {
+                    "Accuracy": 0.27,
+                    "F1 score": 0.2293,
+                    "Training Time": 67.46
+                }
             },
             "medium": {
-                "Accuracy": 0.4833,
-                "Top-3 Accuracy": 0.7215,
-                "Weighted Precision": 0.4639,
-                "Weighted F1 Score": 0.4596,
-                "Training Time": 517.09
+                "1": {
+                    "Accuracy": 0.3933,
+                    "F1 score": 0.3449,
+                    "Training Time": 33.1
+                },
+                "2": {
+                    "Accuracy": 0.4416,
+                    "F1 score": 0.4165,
+                    "Training Time": 106.7
+                },
+                "3": {
+                    "Accuracy": 0.457,
+                    "F1 score": 0.4312,
+                    "Training Time": 211.61
+                },
+                "4": {
+                    "Accuracy": 0.47,
+                    "F1 score": 0.4499,
+                    "Training Time": 347.77
+                },
+                "5": {
+                    "Accuracy": 0.4833,
+                    "F1 score": 0.4596,
+                    "Training Time": 515.42
+                }
             },
             "large": {
-                "Accuracy": 0.498,
-                "Top-3 Accuracy": 0.7431,
-                "Weighted Precision": 0.4835,
-                "Weighted F1 Score": 0.4768,
-                "Training Time": 735.94
+                "1": {
+                    "Accuracy": 0.4102,
+                    "F1 score": 0.3512,
+                    "Training Time": 44.2
+                },
+                "2": {
+                    "Accuracy": 0.4536,
+                    "F1 score": 0.4161,
+                    "Training Time": 160.94
+                },
+                "3": {
+                    "Accuracy": 0.4807,
+                    "F1 score": 0.4478,
+                    "Training Time": 315.07
+                },
+                "4": {
+                    "Accuracy": 0.494,
+                    "F1 score": 0.4647,
+                    "Training Time": 506.36
+                },
+                "5": {
+                    "Accuracy": 0.498,
+                    "F1 score": 0.4768,
+                    "Training Time": 734.81
+                }
             }
         }
     },
     "AL2": {
         "binary": {
             "small": {
-                "Accuracy": 0.915,
-                "Precision": 0.9221,
-                "F1 Score": 0.9435,
-                "Training Time": 67.78
+                "1": {
+                    "Accuracy": 0.905,
+                    "F1 score": 0.9369,
+                    "Training Time": 4.7
+                },
+                "2": {
+                    "Accuracy": 0.895,
+                    "F1 score": 0.9302,
+                    "Training Time": 14.31
+                },
+                "3": {
+                    "Accuracy": 0.915,
+                    "F1 score": 0.9435,
+                    "Training Time": 28.07
+                },
+                "4": {
+                    "Accuracy": 0.905,
+                    "F1 score": 0.9369,
+                    "Training Time": 46.05
+                },
+                "5": {
+                    "Accuracy": 0.92,
+                    "F1 score": 0.9467,
+                    "Training Time": 68.28
+                }
             },
             "medium": {
-                "Accuracy": 0.933,
-                "Precision": 0.9486,
-                "F1 Score": 0.9569,
-                "Training Time": 521.33
+                "1": {
+                    "Accuracy": 0.935,
+                    "F1 score": 0.9579,
+                    "Training Time": 33.1
+                },
+                "2": {
+                    "Accuracy": 0.9433,
+                    "F1 score": 0.9633,
+                    "Training Time": 107.71
+                },
+                "3": {
+                    "Accuracy": 0.94,
+                    "F1 score": 0.9608,
+                    "Training Time": 213.63
+                },
+                "4": {
+                    "Accuracy": 0.94,
+                    "F1 score": 0.961,
+                    "Training Time": 350.75
+                },
+                "5": {
+                    "Accuracy": 0.9373,
+                    "F1 score": 0.9593,
+                    "Training Time": 518.32
+                }
             },
             "large": {
-                "Accuracy": 0.9499,
-                "Precision": 0.9578,
-                "F1 Score": 0.9681,
-                "Training Time": 835.92
+                "1": {
+                    "Accuracy": 0.9417,
+                    "F1 score": 0.9625,
+                    "Training Time": 44.48
+                },
+                "2": {
+                    "Accuracy": 0.9447,
+                    "F1 score": 0.9641,
+                    "Training Time": 176.42
+                },
+                "3": {
+                    "Accuracy": 0.9481,
+                    "F1 score": 0.9665,
+                    "Training Time": 346.06
+                },
+                "4": {
+                    "Accuracy": 0.95,
+                    "F1 score": 0.9679,
+                    "Training Time": 552.22
+                },
+                "5": {
+                    "Accuracy": 0.9477,
+                    "F1 score": 0.9661,
+                    "Training Time": 784.38
+                }
             }
         },
         "multi": {
             "small": {
-                "Accuracy": 0.31,
-                "Top-3 Accuracy": 0.565,
-                "Weighted Precision": 0.3058,
-                "Weighted F1 Score": 0.2584,
-                "Training Time": 67.62
+                "1": {
+                    "Accuracy": 0.19,
+                    "F1 score": 0.1162,
+                    "Training Time": 4.44
+                },
+                "2": {
+                    "Accuracy": 0.26,
+                    "F1 score": 0.1917,
+                    "Training Time": 13.87
+                },
+                "3": {
+                    "Accuracy": 0.25,
+                    "F1 score": 0.1726,
+                    "Training Time": 27.55
+                },
+                "4": {
+                    "Accuracy": 0.315,
+                    "F1 score": 0.2597,
+                    "Training Time": 45.55
+                },
+                "5": {
+                    "Accuracy": 0.3,
+                    "F1 score": 0.242,
+                    "Training Time": 67.76
+                }
             },
             "medium": {
-                "Accuracy": 0.483,
-                "Top-3 Accuracy": 0.7208,
-                "Weighted Precision": 0.4716,
-                "Weighted F1 Score": 0.4711,
-                "Training Time": 528.19
+                "1": {
+                    "Accuracy": 0.3933,
+                    "F1 score": 0.3449,
+                    "Training Time": 33.39
+                },
+                "2": {
+                    "Accuracy": 0.4433,
+                    "F1 score": 0.4235,
+                    "Training Time": 109.1
+                },
+                "3": {
+                    "Accuracy": 0.4613,
+                    "F1 score": 0.4314,
+                    "Training Time": 216.24
+                },
+                "4": {
+                    "Accuracy": 0.4656,
+                    "F1 score": 0.4443,
+                    "Training Time": 354.97
+                },
+                "5": {
+                    "Accuracy": 0.4843,
+                    "F1 score": 0.465,
+                    "Training Time": 523.56
+                }
             },
             "large": {
-                "Accuracy": 0.4889,
-                "Top-3 Accuracy": 0.7361,
-                "Weighted Precision": 0.4915,
-                "Weighted F1 Score": 0.4667,
-                "Training Time": 1451.59
+                "1": {
+                    "Accuracy": 0.4102,
+                    "F1 score": 0.3512,
+                    "Training Time": 44.41
+                },
+                "2": {
+                    "Accuracy": 0.4586,
+                    "F1 score": 0.4238,
+                    "Training Time": 197.22
+                },
+                "3": {
+                    "Accuracy": 0.4873,
+                    "F1 score": 0.4574,
+                    "Training Time": 385.88
+                },
+                "4": {
+                    "Accuracy": 0.489,
+                    "F1 score": 0.4589,
+                    "Training Time": 614.91
+                },
+                "5": {
+                    "Accuracy": 0.4954,
+                    "F1 score": 0.4743,
+                    "Training Time": 855.62
+                }
             }
         }
     }

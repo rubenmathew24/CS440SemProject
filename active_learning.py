@@ -91,7 +91,7 @@ def active_learning_loop(sample_functions):
         
         utils.logger([("Evaluating...", "magenta")], log_location)
         utils.logger([("\tAccuracy:", "white"), (f"{accuracy:.4f}", "magenta")], log_location)
-        utils.logger([("\tF1 score:", "white"), (f"{f1:.4f}", "magenta")], log_location)
+        utils.logger([("\tF1 Score:", "white"), (f"{f1:.4f}", "magenta")], log_location)
         utils.logger([("\tTraining Time:", "white"), (f"{total_training_time:.2f}", "magenta"), ("seconds", "white")], log_location)
 
         # Break if done
